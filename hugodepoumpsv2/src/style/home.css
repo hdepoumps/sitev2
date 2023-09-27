@@ -1,0 +1,16 @@
+.contactNight{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+}
+
+.projectAbout{
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}

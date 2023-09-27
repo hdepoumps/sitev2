@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "link":"",
+    "title": "Hugo Depoumps"
+  },
+  {
+    "id": "2",
+    "link":"project",
+    "title": "Project"
+  },
+  {
+    "id": "3",
+    "link":"about-me",
+    "title": "About me"
+  },
+  {
+    "id": "4",
+    "link":"contact",
+    "title": "Contact"
+  },
+  {
+    "id": "5",
+    "link":"",
+    "title": "Night mode"
+  }
+]

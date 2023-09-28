@@ -1,9 +1,19 @@
 import '../style/home.css'
 import data from '../data/neomorphismButton.json'
 import NeomorphismButton,{heightCard,widthCard} from "../components/neomorphismButton";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useLocation } from 'react-router-dom';
 
+const disparitionNeoButton = keyframes`
+  from{
+    box-shadow: ${heightCard/10}px ${heightCard/10}px ${heightCard/10*2}px #c9cccf,
+    -${heightCard/10}px -${heightCard/10}px ${heightCard/10*2}px #ffffff;
+  }
+  to {
+    box-shadow: ${heightCard/10}px ${heightCard/10}px ${heightCard/10*2}px #ecf0f3,
+    -${heightCard/10}px -${heightCard/10}px ${heightCard/10*2}px #ecf0f3;
+  }
+`
 
 const MainPage =styled.main`
   background-color: #ecf0f3;
@@ -37,14 +47,20 @@ const MainPage =styled.main`
     top: 40px;
     left: calc(100vw - ${widthCard}px - 40px);
   }
+  .contact{
+    .neo4{
+      animation: ${disparitionNeoButton} 300ms ease-out forwards ;
+    }
+  }
 `
+
 function Home(){
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-    const id = searchParams.get('id');
+    const idurl = searchParams.get('id');
 
     // Now, 'id' contains the value of the "id" parameter from the URL
-    console.log('ID from URL:', id);
+    console.log('ID from URL:', idurl);
 
     const neoButtons = data.map((item,index) => {
         return(
@@ -59,7 +75,7 @@ function Home(){
 
     return(
             <MainPage>
-                <section>{neoButtons}</section>
+                <section className={idurl}>{neoButtons}</section>
             </MainPage>
         )
 

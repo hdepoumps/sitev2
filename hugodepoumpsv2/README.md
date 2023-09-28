@@ -4,6 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+if you just download the site you need to install react and styled components in hugodepoumpsv2:
+### `npm install`
+### `npm install styled-components`
 In the project directory, you can run:
 
 ### `npm start`

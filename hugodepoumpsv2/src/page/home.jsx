@@ -4,6 +4,7 @@ import NeomorphismButton,{heightCard,widthCard} from "../components/neomorphismB
 import styled from "styled-components";
 import { useLocation } from 'react-router-dom';
 
+
 const MainPage =styled.main`
   background-color: #ecf0f3;
   max-width: 100vw;
